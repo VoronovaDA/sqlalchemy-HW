@@ -1,1 +1,0 @@
-postgresql = "postgresql://postgres:7404@localhost:5432/homework_db"
