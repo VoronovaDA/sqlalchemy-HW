@@ -1,11 +1,6 @@
-import os
-from dotenv import load_dotenv
 from sqlalchemy import create_engine, ForeignKey, Column, String, Integer, Date
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-
-load_dotenv()
-postgresql = os.getenv("postgresql")
 
 Base = declarative_base()
 
@@ -85,7 +80,7 @@ class Sale(Base):
 
 
 
-engine = create_engine("postgresql://postgres:7404@localhost:5432/homework_db")
+engine = create_engine("postgresql://...:...@localhost:5432/...")
 conn = engine.connect()
 Base.metadata.drop_all(bind=engine)
 Base.metadata.create_all(bind=engine)
